@@ -1,0 +1,36 @@
+!!! 5
+html(lang='en')
+head
+    meta(charset='utf-8')
+    title @ViewBag.Title - My ASP.NET MVC Application
+    link(href='~/favicon.ico', rel='shortcut icon', type='image/x-icon')
+    meta(name='viewport', content='width=device-width')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', rel='stylesheet', type='text/css')
+  body
+    .navbar
+      .navbar-inner
+        .container-fluid
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.top-nav.nav-collapse,.sidebar-nav.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+            a.span2.brand(href='/Hcs/Index')
+    .container-fluid-full
+      .row-fluid
+        #sidebar-left.span2
+          .nav-collapse.sidebar-nav
+            ul.nav.nav-tabs.nav-stacked.main-menu
+              li#overview
+                a(href="/") Overview
+              li#accounts-receivable
+                a(href="/accounts-receivable") Accounts Receivable  
+              li#payments
+                a(href="/payments") Payments
+              li#audits
+                a(href="/audits") Audits
+              li#inventory
+                a(href="/inventory") Inventory
+              li#transactions
+                a(href="/transactions") Transactions
+        #content.span10
+          block content

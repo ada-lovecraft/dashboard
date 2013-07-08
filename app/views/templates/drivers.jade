@@ -1,0 +1,38 @@
+#drivers.row-fluid(data-endpoint='@api')
+  script#driver-date(type='text/html')
+      <div class="row-fluid text-right">
+      <p id="driver-date-selector" class="pull-right">
+      {{contractorName}} metrics from {{startDate}} to {{endDate}} ({{frequency}})
+      </p>
+      </div>
+    script#driver-display(type='text/html')
+      {{#drivers}}
+      <div class="row-fluid driver-header clearfix">
+      <span class="headerlabel pull-left">{{Type}}</span>
+      <hr class="headerline"/>
+      </div>
+      <div class="clearfix"></div>
+      <div class="driver-row row-fluid pull-left">
+      <div class="driver pull-left">
+      <div class="driver-value">{{Auditors}}</div>
+      <div class="driver-label">Auditors</div>
+      </div>
+      <div class="driver pull-left">
+      <div class="driver-value">{{AuditsPerDay}}</div>
+      <div class="driver-label">Audits / Day</div>
+      </div>
+      <div class="driver pull-left">
+      <div class="driver-value">{{PercentFindings}}</div>
+      <div class="driver-label">% Findings</div>
+      </div>
+      <div class="driver pull-left">
+      <div class="driver-value">{{DollarsPerFinding}}</div>
+      <div class="driver-label">$ Per Finding</div>
+      </div>
+      <div class="driver pull-left">
+      <div class="driver-value">{{Appeals}}</div>
+      <div class="driver-label">Appeals / Day</div>
+      </div>
+      </div>
+      </div>
+      {{/drivers}}

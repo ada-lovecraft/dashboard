@@ -1,0 +1,20 @@
+#charts.row-fluid
+    #contractor-drawer.collapse.drawer
+      .row-fluid
+        .border-bottom.border-left.border-right.drawer-body
+          #subSelector
+            button.btn.collapsed.btn-small.contractor-collapse(type='button', data-toggle='collapse', data-target='#contractor-drawer')
+              span.icon-chevron-up
+    .row-fluid
+      #rangeCharts
+        .row-fluid.border-bottom
+          #rangeSelectorContainer.hide(style='min-height: 1px;')
+        .row-fluid.border-bottom
+          #aiRangeChart.hide(style='min-height: 1px;')
+          #trendLegend.chartLegend
+            .plan
+              ul.inline
+            .actual
+              ul.inline
+    #tooltipShiv
+    #pointShiv

@@ -1,0 +1,16 @@
+extends layout
+block content
+.row-fluid.content-container
+  .border-bottom.header-row
+    span.title= title
+    button#contractorToggle.btn.collapsed.btn-link(type='button', data-toggle='collapse', data-target='#contractor-drawer')
+      | Contractors (
+      span#contractorCount
+      | )
+      i.icon-chevron-down
+    #frequency-selector.btn-group.pull-right(data-toggle='buttons-radio')
+      button.btn.active.selected(type='button', data-frequency='M') Monthly
+      button.btn(type='button', data-frequency='Q') Quarterly
+      button.btn(type='button', data-frequency='Y') Yearly
+  | @Html.Partial("_Trend", "accountsReceivable")
+  | @Html.Partial("_Drivers", "accountsReceivable")
